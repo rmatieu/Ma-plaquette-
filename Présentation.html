@@ -1,0 +1,707 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Présentation </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="137ec384-0168-80c8-b20a-ed82cff16f97" class="page sans"><header><h1 class="page-title">Présentation </h1><p class="page-description"></p></header><div class="page-body"><p id="138ec384-0168-80c6-bdcd-efb65b46869c" class="">
+</p><p id="138ec384-0168-80c5-b1e6-cf982a2f0a07" class=""><strong>Salut ! Moi, c’est Mathieu. Mon objectif : vous aider à lancer des vidéos sponsorisées. Je m’occupe de tout : création de scripts accrocheurs, montage dynamique, et optimisé pour les réseaux. – il ne vous reste plus qu’à vous filmer!</strong></p><p id="138ec384-0168-8028-afb9-dacbd19e5d87" class="">
+</p><hr id="138ec384-0168-8061-8ad4-e32758d45b23"/><p id="138ec384-0168-8054-b5ce-d4463a79199c" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="138ec384-0168-8013-83e8-c650878aece6"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="a0eb8422-07d7-4d48-87d1-2ff092c5b20a" class=""><strong>Ce que je vous propose</strong></p><ul id="138ec384-0168-8013-86d0-e3709cc96f60" class="bulleted-list"><li style="list-style-type:disc"><strong>Scripts adaptés</strong> : Je vous envoie plusieurs idées de scripts conçus pour capter l’attention dès les premières secondes, idéals pour des vidéos face caméra.</li></ul><ul id="138ec384-0168-801f-8cdd-c567b5c699f5" class="bulleted-list"><li style="list-style-type:disc"><strong>Montage sur-mesure</strong> : Je crée un rendu dynamique en intégrant des effets sonores, des sous-titres et des éléments visuels pour donner de l&#x27;impact à chaque vidéo.</li></ul><ul id="138ec384-0168-80f4-a910-ee30637ec5d9" class="bulleted-list"><li style="list-style-type:disc"><strong>Optimisation pour les réseaux sociaux</strong> : Chaque vidéo est ajustée pour un maximum de visibilité sur les différentes plateformes.</li></ul><ul id="138ec384-0168-8022-91e1-e321d6631534" class="bulleted-list"><li style="list-style-type:disc"><strong>Aide pour la mise en ligne sponsorisée (si besoin)</strong> : Je vous accompagne pour lancer votre publicité sur Meta Business Manager afin de toucher un public plus large.</li></ul></div></figure><p id="138ec384-0168-80df-bdd0-d8ce6cb01a27" class="">
+</p><p id="138ec384-0168-8033-8cc9-e26e4d290408" class=""><strong>Processus de Travail et Modalités de Paiement</strong></p><p id="138ec384-0168-808b-9f74-d250e5cd2e61" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="138ec384-0168-808e-80bc-ec309e02226a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="138ec384-0168-8067-96a8-f3f40ce72ed6" class=""><strong>Comment ça se passe ?</strong></p><ul id="138ec384-0168-8059-ad9f-e14499ec5cfd" class="bulleted-list"><li style="list-style-type:disc"><strong>Étape 1 :</strong> On définit ensemble les script adapté, avec des idées personnalisées selon vos besoins.</li></ul><ul id="138ec384-0168-808b-b768-c3bd7a9f00e8" class="bulleted-list"><li style="list-style-type:disc"><strong>Étape 2 :</strong> Vous enregistrez votre vidéo – je vous donne quelques conseils pour le cadrage et la lumière (si besoin)</li></ul><ul id="138ec384-0168-806e-9831-ebd77ec2320c" class="bulleted-list"><li style="list-style-type:disc"><strong>Étape 3 :</strong> Vous m’envoyer les videos brut. Je m’occupe du montage.</li></ul><ul id="138ec384-0168-80a5-a2da-ef53dc773540" class="bulleted-list"><li style="list-style-type:disc"><strong>Étape 4 :</strong> Validation et retouches, pour être sûr que tout vous convient.</li></ul><ul id="138ec384-0168-80e8-9a79-d56597ac4ab6" class="bulleted-list"><li style="list-style-type:disc"><strong>Étape 5 :</strong> Livraison des vidéos prêtes à publier !</li></ul></div></figure><p id="138ec384-0168-8096-a3d1-fc87f6d03361" class="">
+</p><p id="138ec384-0168-807c-bfb1-f94a1f4613bd" class=""><strong>Tarifs et Contact</strong></p><p id="138ec384-0168-8044-b358-f98f97aadb53" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="138ec384-0168-8042-a243-fc9c02663f37"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="dd74ac04-1853-4590-ba7a-59d23252f956" class=""><strong>Pack de 3 vidéos publicitaires</strong></p><ul id="4e6cf618-d5bb-419c-a955-7117dc4ad18c" class="bulleted-list"><li style="list-style-type:disc"><strong>Prix :</strong> 50 €</li></ul><ul id="8c8179cb-95f7-41a9-9bcd-a07ed4651353" class="bulleted-list"><li style="list-style-type:disc"><strong>Comprend :</strong><ul id="943a2d8e-a45a-46b7-b58e-c17cd09c1b28" class="bulleted-list"><li style="list-style-type:circle">Création de scripts adaptés pour des vidéos face caméra</li></ul><ul id="167d359c-675e-4bb3-921e-9f03b9233639" class="bulleted-list"><li style="list-style-type:circle">Montage dynamique</li></ul><ul id="bfdb69f5-6652-453d-88dc-773747a6070d" class="bulleted-list"><li style="list-style-type:circle">Format optimisé pour les réseaux sociaux</li></ul><ul id="138ec384-0168-8028-a19c-e462963ae847" class="bulleted-list"><li style="list-style-type:circle">Une aide pour la mise en ligne une vidéo sponsorisée. (si besoin)</li></ul></li></ul></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="138ec384-0168-80bf-8d4a-f71d7221e1c1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="a9b4c0f0-da1f-472c-8d07-c2f36857b9c3" class=""><strong>Contact</strong></p><p id="138ec384-0168-806b-8212-e73cda549b32" class="">Email: mathieuribs77@gmail.com</p><p id="138ec384-0168-80d8-a243-fe0709262c54" class="">whatsapp: </p></div></figure><p id="138ec384-0168-8057-b1a9-fd93639a17bc" class="">
+</p><p id="138ec384-0168-8065-9561-fd119180469e" class=""><strong>Mon objectif, c’est que tout soit simple et transparent </strong></p><p id="138ec384-0168-8040-877c-d153eb8e583c" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="138ec384-0168-80e3-9b20-c1e44242d0fa"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="138ec384-0168-8002-a9ee-ecb414abb38f" class=""><strong>Modalités de paiement </strong></p><p id="138ec384-0168-804e-9bec-e322d7984d1d" class="">Je passe par PayPal pour recevoir un paiement. Une fois que le projet est terminé et que vous êtes satisfait, je vous enverrai une demande de paiement que vous pourrez régler Via PayPal.</p></div></figure><p id="138ec384-0168-800f-927b-dca3085c14fe" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="138ec384-0168-80e2-89ac-da8b4ddc200c"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="138ec384-0168-80b2-8251-f044f7fffcd6" class=""><strong>Pourquoi une video sponsorisé ? </strong></p><p id="138ec384-0168-80cd-80dd-fc4a099bcb8e" class="">Une video sponsorisé, c’est l’opportunité de faire connaître votre projet à grande échelle. Une bonne vidéo capte l’attention dès les premières secondes et donne envie d’en savoir plus. Ensemble, on crée des vidéos qui poussent votre audience à agir – visiter votre site, découvrir vos services, ou même prendre contact. </p></div></figure><p id="fc4d8621-a063-435e-9969-947b99582f03" class="">
+</p><p id="138ec384-0168-8075-ad87-eeda566b9743" class="">
+</p><p id="138ec384-0168-80c1-a3b5-ec00490bf5c9" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="138ec384-0168-8066-a8ab-f99acae1b532"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="138ec384-0168-8061-8eda-f697e68cc41d" class=""><strong><span style="border-bottom:0.05em solid">Détail de mon offre</span></strong></p><ul id="a79b030e-f665-4b5f-b6a4-f77d2a0d84af" class="bulleted-list"><li style="list-style-type:disc"><strong>Des scripts adaptés pour vidéo face caméra</strong></li></ul><p id="138ec384-0168-804d-8a9d-d80537627b43" class="">Je vous propose plusieurs idées de scripts commerciaux, spécialement pensés pour que vous puissiez enregistrer facilement une vidéo au format face caméra. Chaque script est conçu pour captiver l’attention dès les premières secondes et mettre en valeur votre marque, produit ou service. </p><p id="138ec384-0168-8090-a043-db683dbbd615" class="">
+</p><ul id="138ec384-0168-8066-9a2e-f621c9ad276e" class="bulleted-list"><li style="list-style-type:disc"><strong>Montage sur-mesure</strong> </li></ul><p id="138ec384-0168-8058-b6f8-e9da4782cb8c" class="">Après réception de vos vidéos, je m’occupe du montage : je sélectionne les meilleures séquences, ajoute les sous-titres, les effets sonores, des éléments visuels ect.. le tout pour un rendu fluide et dynamique. L’objectif est de créer des vidéos qui attirent l’attention de votre audience et transmettent votre message ou qui appelle à l’action de façon claire. </p><p id="138ec384-0168-80d4-8128-f02adcacba23" class="">
+</p><ul id="138ec384-0168-801b-b327-f82ce1fb02ab" class="bulleted-list"><li style="list-style-type:disc"><strong>Format optimisé pour les réseaux</strong></li></ul><p id="138ec384-0168-80d8-ad0d-ecfed5df7366" class="">Les vidéos sont prêtes à être publiées et conçues pour s’adapter parfaitement aux différents réseaux sociaux, pour garantir qu’elles touchent le maximum de personnes et soient bien mises en avant.</p><p id="138ec384-0168-8014-b2b5-f96a094caab2" class="">
+</p><p id="138ec384-0168-80e7-86d5-d67fd99b4bfd" class="">Si besoin, je peux vous accompagner pour la mise en ligne d’une publicité sponsorisée via meta Business. </p></div></figure><p id="138ec384-0168-8095-9aaf-f0f7688c3f64" class="">
+</p><p id="138ec384-0168-80ac-b105-d951b0a5f96a" class="">
+</p><p id="138ec384-0168-80af-81cb-d090fa37079b" class="">
+</p><p id="138ec384-0168-8095-9ef3-eaa81757a42c" class="">
+</p><p id="137ec384-0168-800c-b324-de6b7339a3da" class="">
+</p><p id="137ec384-0168-80be-aefa-e3aad6630d5d" class="">
+</p><p id="138ec384-0168-803b-a8f9-fffc7f778cbf" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
